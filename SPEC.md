@@ -69,7 +69,7 @@ Together these cover the full flow: pick/configure a course → set up players a
 
 ## 6. Contact
 
-- **Contact:** Vince Gamble — vgamble@golfpvcc.com
+- **Contact:** Vince Gamble — Sales@golfpvcc.com
 - Use on About/Contact page as the way for visitors to reach out.
 
 ## 7. FAQ — Confirmed Questions
