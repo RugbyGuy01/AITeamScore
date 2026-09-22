@@ -41,7 +41,12 @@ $verifyUrl = $scheme . '://' . $_SERVER['HTTP_HOST'] . '/verify.php?token=' . $t
 
 $subject = 'Verify your email to download Team Score';
 $message = "Click the link below to verify your email and download Team Score for Android:\n\n"
-    . $verifyUrl . "\n\nThis link expires in 24 hours.\n\nIf you didn't request this, you can ignore this email.";
+    . $verifyUrl . "\n\nThis link expires in 24 hours.\n\n"
+    . "Installation instructions:\n"
+    . "When installing the app, a Google Play Protect screen will appear. Select \"More details.\"\n"
+    . "The app scan recommendation screen will appear. Select \"Install without scanning.\"\n"
+    . "You're all set. Happy golfing!\n\n"
+    . "If you didn't request this, you can ignore this email.";
 $headers = "From: no-reply@golfpvcc.com\r\nContent-Type: text/plain; charset=UTF-8";
 
 if (!mail($email, $subject, $message, $headers)) {
