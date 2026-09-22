@@ -50,4 +50,8 @@ if (!mail($email, $subject, $message, $headers)) {
     exit;
 }
 
+$notifySubject = 'Team Score APK download requested';
+$notifyMessage = "A visitor requested the Team Score APK download.\n\nEmail: " . $email . "\nRequested: " . date('Y-m-d H:i:s T');
+mail('sales@golfpvcc.com', $notifySubject, $notifyMessage, $headers);
+
 echo json_encode(['ok' => true]);
