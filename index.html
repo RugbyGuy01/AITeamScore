@@ -108,8 +108,8 @@
 <section class="alt" id="availability">
   <div class="wrap" style="text-align:center;">
     <h2 class="section-title">Availability</h2>
-    <p class="section-sub">Team Score is built and working on Android. It isn't listed on the Google Play Store yet — download the APK directly to install it.</p>
-    <a class="btn" href="downloads/TeamScore.apk" download>Download for Android (APK)</a>
+    <p class="section-sub">Team Score is built and working on Android. It isn't listed on the Google Play Store yet — verify your email to download the APK directly.</p>
+    <button class="btn" id="downloadBtn" type="button">Download for Android (APK)</button>
     <div class="badge-box" style="margin-top:18px;">
       <span class="dot"></span>
       Coming to Google Play
@@ -117,10 +117,30 @@
   </div>
 </section>
 
+<div class="modal-overlay" id="downloadModal" hidden>
+  <div class="modal">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close">&times;</button>
+    <div id="modalStepForm">
+      <h3>Enter your email to download</h3>
+      <p>We'll send a verification link to your email. Click it to start your download.</p>
+      <form id="downloadForm">
+        <input type="email" id="downloadEmail" name="email" required placeholder="you@example.com" autocomplete="email">
+        <button type="submit" class="btn">Send verification email</button>
+      </form>
+      <p class="modal-error" id="modalError" hidden></p>
+    </div>
+    <div id="modalStepSent" hidden>
+      <h3>Check your email</h3>
+      <p>We sent a verification link to <strong id="sentEmail"></strong>. Click it to start your download. The link expires in 24 hours.</p>
+    </div>
+  </div>
+</div>
+
 <footer>
   <p>&copy; 2026 Team Score. Built for the weekend foursome.</p>
   <p><a href="about.html">Contact Vince Gamble</a></p>
 </footer>
 
+<script src="js/download.js"></script>
 </body>
 </html>
